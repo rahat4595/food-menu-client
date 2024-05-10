@@ -23,7 +23,7 @@ const Foods = ({food}) => {
                             <p>Expire Date: {date}</p>
                             <p>Pickup Location: {location}</p>
                             <p>Status: {status}</p>
-                            <p>Notes: {notes}</p>
+                            <p>Additional Notes: {notes}</p>
                             {/* Add more properties here as needed */}
                             
                         <button className="text-xl font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">
