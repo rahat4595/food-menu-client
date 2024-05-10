@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/Context";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyFood = () => {
@@ -16,7 +17,40 @@ const MyFood = () => {
                 setLists(data);
                 
             });
-    } ,[user])
+    } ,[user]);
+
+    const handleDeleteCraft = (id) => {
+        // Show SweetAlert confirmation dialog
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'You will not be able to recover this craft!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // If user confirms deletion, send DELETE request to server
+                fetch(`http://localhost:5000/foods/${id}`, {
+                    method: 'DELETE',
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        // Update state to remove the deleted craft
+                        setLists(lists.filter(craft => craft._id !== id));
+                        // Show success message
+                        Swal.fire(
+                            'Deleted!',
+                            'Your craft has been deleted.',
+                            'success'
+                        );
+                    })
+                    .catch(error => console.error('Error deleting craft:', error));
+            }
+        });
+    };
 
     return (
         <div>
@@ -47,7 +81,7 @@ const MyFood = () => {
                                     <Link to={`/updateFood/${list._id}`} className="text-blue-500 hover:underline">Update</Link>
                                 </td>
                                 <td className="border px-4 py-2">
-                                    <Link className="text-blue-500 hover:underline">Delete</Link>
+                                    <button onClick={() => handleDeleteCraft(list._id)}  className="text-blue-500 hover:underline">Delete</button>
                                 </td>
                             </tr>
                         ))}
