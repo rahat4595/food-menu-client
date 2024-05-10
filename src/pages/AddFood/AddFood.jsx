@@ -101,6 +101,7 @@ const AddFood = () => {
                 placeholder="Your Name"
                 defaultValue={user?.displayName}
                 required
+                readOnly
               />
             </div>
             <div className="col-span-6 sm:col-span-3">
@@ -118,6 +119,7 @@ const AddFood = () => {
                 placeholder="Your Email"
                 defaultValue={user?.email}
                 required
+                readOnly
               />
             </div>
 

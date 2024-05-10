@@ -36,8 +36,8 @@ const NavBar = () => {
         <NavLink className={({ isActive }) => isActive ? 'text-lg font-semibold text-[#23BE0A] border px-1 rounded-md border-[#23BE0A]' : 'text-lg font-semibold'} to="/">Home</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-lg font-semibold text-[#23BE0A] border px-1 rounded-md border-[#23BE0A]' : 'text-lg font-semibold'} to="/allFoods">Available Foods</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-lg font-semibold text-[#23BE0A] border px-1 rounded-md border-[#23BE0A]' : 'text-lg font-semibold'} to="/adds">Add Food</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-lg font-semibold text-[#23BE0A] border px-1 rounded-md border-[#23BE0A]' : 'text-lg font-semibold'} to="/myFood">Manage My Foods</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-lg font-semibold text-[#23BE0A] border px-1 rounded-md border-[#23BE0A]' : 'text-lg font-semibold'} to="/myReq">My Food Reques</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-lg font-semibold text-[#23BE0A] border px-1 rounded-md border-[#23BE0A]' : 'text-lg font-semibold'} to="/myFood">My Foods</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-lg font-semibold text-[#23BE0A] border px-1 rounded-md border-[#23BE0A]' : 'text-lg font-semibold'} to="/myReq">Food Request</NavLink>
     </>;
 
     return (

@@ -14,6 +14,7 @@ const AllFood = () => {
     );
 
     // Sort filtered foods based on sorting option
+    // Sort filtered foods based on sorting option
     const sortedFoods = [...filteredFoods].sort((a, b) => {
         if (sortBy === "date") {
             return new Date(a.date) - new Date(b.date);
@@ -70,13 +71,13 @@ const AllFood = () => {
                             <p>Status: {food.status}</p>
                             <p>Notes: {food.notes}</p>
                             {/* Add more properties here as needed */}
-                            
-                        <button className="text-xl font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">
-                        <span className="absolute inset-0 bg-[#23BE0A] duration-300 transition-transform group-hover:translate-x-full"></span>
-                        <span className="relative z-10">View Details</span>
-                        </button>
-                    
-                           
+
+                            <button className="text-xl font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">
+                                <span className="absolute inset-0 bg-[#23BE0A] duration-300 transition-transform group-hover:translate-x-full"></span>
+                                <span className="relative z-10">View Details</span>
+                            </button>
+
+
                         </div>
                     </div>
                 ))}
