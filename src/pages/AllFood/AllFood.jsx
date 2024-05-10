@@ -61,7 +61,7 @@ const AllFood = () => {
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">
-                                <h1>{user?.displayName}</h1>
+                                <p>{user?.displayName}</p>
                                 <img src={user?.photoURL} alt="" style={{ borderRadius: "50%", width: "50px", height: "50px" }} />
                             </h2>
                             <p>Food Name: {food.foodName}</p>

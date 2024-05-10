@@ -65,7 +65,7 @@ const NavBar = () => {
                             </label>
                         </ul>
                     </div>
-                    <h1 className="text-md lg:text-2xl font-bold">Crafty Corner</h1>
+                    <h1 className="text-md lg:text-2xl font-bold">Foody Hub</h1>
                 </div>
                 <div className="navbar-center hidden lg:flex ">
                     <ul className="menu flex gap-5 menu-horizontal px-5">
