@@ -6,6 +6,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import AddFood from "../pages/AddFood/AddFood";
+import AllFood from "../pages/AllFood/AllFood";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -15,11 +17,17 @@ const router = createBrowserRouter([
       children: [
         {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: () => fetch('http://localhost:5000/foods')
         },
         {
           path: '/adds',
-          element: <AddFood></AddFood>
+          element: <PrivateRoute><AddFood></AddFood></PrivateRoute>
+        },
+        {
+          path:'/allFoods',
+          element:<AllFood></AllFood>,
+          loader: () => fetch('http://localhost:5000/foods')
         },
         {
             path:'/login',
