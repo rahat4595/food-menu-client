@@ -14,7 +14,7 @@ const Home = () => {
         <div>
             <div className="max-w-7xl mx-auto mt-10">
                 <h2 className="text-4xl font-bold text-center ">Featured Foods</h2>
-                <p className="text-center text-lg mt-10 px-5 lg:px-52">Explore your favourite arts and crafts categories and get yourself a inspiration to go beyond about artisticts</p>
+                <p className="text-center text-lg mt-10 px-5 lg:px-52">take a look at our featured foods</p>
             </div>
             
             {/* Render Foods component for each food item */}
