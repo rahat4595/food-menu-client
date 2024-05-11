@@ -10,7 +10,7 @@ const AddFood = () => {
         return <div>Loading...</div>;
     }
 
-    const { email, displayName,  } = user;
+    const { email, displayName, photoURL } = user;
 
     const handleAddFood = event => {
         event.preventDefault();
@@ -24,6 +24,7 @@ const AddFood = () => {
     const photo = form.photo.value;
     const status = form.status.value;
     const notes = form.notes.value;
+    
 
     const newFood = {
       foodName,
@@ -35,7 +36,7 @@ const AddFood = () => {
       notes,
       email,
       donatorName: displayName,
-    //   donatorPhoto: photoURL,
+      donatorPhoto: photoURL,
     };
         console.log("New Craft", newFood)
 
@@ -60,7 +61,7 @@ const AddFood = () => {
                     confirmButtonText: 'OK'
                   });
 
-                  form.reset();
+                  
             }
         })
     }
@@ -69,6 +70,7 @@ const AddFood = () => {
 
     return (
         <div className="bg-white border-2 rounded-lg shadow relative m-10">
+          
       <div className="flex items-start justify-between p-5 border-b rounded-t">
         <h3 className="md:text-2xl text-xl italic font-bold">
           Donor Information :-
@@ -85,6 +87,29 @@ const AddFood = () => {
               alt=""
             />
           </div>
+
+              {/* donator photo url */}
+              <div className="col-span-12 sm:col-span-3">
+              <label
+                htmlFor="donatorPhoto"
+                className="text-lg italic font-semibold text-gray-900 block mb-2"
+              >
+               Donator Photo
+              </label>
+              <input
+                type="text"
+                name="donatorPhoto"
+                id="donatorPhoto"
+                className="shadow-sm bg-gray-50 border border-gray-300 text-black sm:text-lg  rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                placeholder="Your Email"
+                defaultValue={user?.photoURL}
+                required
+                readOnly
+              />
+            </div>
+            {/* sdfsadf */}
+
+
           <div className="grid grid-cols-6 gap-6">
             <div className="col-span-6 sm:col-span-3">
               <label
@@ -123,6 +148,8 @@ const AddFood = () => {
               />
             </div>
 
+        
+
             <div className="col-span-6 sm:col-span-3">
               <p className="relative md:mt-8 mt-4 w-full inline-flex items-center justify-center p-0.5 mb-6 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                 <span className="relative md:text-2xl text-lg w-full italic font-bold px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -143,6 +170,7 @@ const AddFood = () => {
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-base font-semibold rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
               />
             </div>
+            
             <div className="col-span-6 sm:col-span-3 md:mt-[110px]">
               <label
                 htmlFor="quantity"
@@ -176,7 +204,7 @@ const AddFood = () => {
                 htmlFor="location"
                 className="text-lg italic font-semibold text-gray-900 block mb-2"
               >
-                Location
+               Pickup Location
               </label>
               <input
                 type="text"
@@ -213,7 +241,7 @@ const AddFood = () => {
                 className="shadow-sm valu bg-gray-50 border border-gray-300 text-gray-900 sm:text-lg rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                 defaultValue="Available"
                 style={{
-                  color: "green",
+                  
                   fontWeight: "500",
                   fontSize: "1.3rem",
                   fontStyle: "italic",

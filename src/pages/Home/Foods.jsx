@@ -6,7 +6,7 @@ const Foods = ({food}) => {
 
     const { user } = useContext(AuthContext);
 
-    const {foodName,photo, quantity,date,location,status,notes} = food
+    const {foodName,photo, quantity,date,location,status,notes,donatorName,donatorPhoto} = food
     return (
         <div>
             <div className="card  w-full bg-base-100 shadow-xl">
@@ -15,8 +15,8 @@ const Foods = ({food}) => {
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">
-                                <p>{user?.displayName}</p>
-                                <img src={user?.photoURL} alt="" style={{ borderRadius: "50%", width: "50px", height: "50px" }} />
+                                <p>{donatorName}</p>
+                                <img src={donatorPhoto} alt="" style={{ borderRadius: "50%", width: "50px", height: "50px" }} />
                             </h2>
                             <p>Food Name: {foodName}</p>
                             <p>Quantity: {quantity}</p>

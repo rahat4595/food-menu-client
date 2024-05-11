@@ -14,7 +14,7 @@ const Update = () => {
         return <div>Loading...</div>;
     }
 
-    const { email, displayName,  } = user;
+    const { email, displayName,photoURL  } = user;
 
     const handleUpdateFood = event => {
         event.preventDefault();
@@ -39,7 +39,7 @@ const Update = () => {
       notes,
       email,
       donatorName: displayName,
-    //   donatorPhoto: photoURL,
+      donatorPhoto: photoURL,
     };
         console.log("New food", updateFood)
 
@@ -86,6 +86,26 @@ const Update = () => {
                 alt=""
               />
             </div>
+             {/* donator photo url */}
+             <div className="col-span-12 sm:col-span-3">
+              <label
+                htmlFor="donatorPhoto"
+                className="text-lg italic font-semibold text-gray-900 block mb-2"
+              >
+               Donator Photo
+              </label>
+              <input
+                type="text"
+                name="donatorPhoto"
+                id="donatorPhoto"
+                className="shadow-sm bg-gray-50 border border-gray-300 text-black sm:text-lg  rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                placeholder="Your Email"
+                defaultValue={user?.photoURL}
+                required
+                readOnly
+              />
+            </div>
+            {/* sdfsadf */}
             <div className="grid grid-cols-6 gap-6">
               <div className="col-span-6 sm:col-span-3">
                 <label
@@ -180,7 +200,7 @@ const Update = () => {
                   htmlFor="location"
                   className="text-lg italic font-semibold text-gray-900 block mb-2"
                 >
-                  Location
+                 Pickup Location
                 </label>
                 <input
                   type="text"
@@ -219,7 +239,7 @@ const Update = () => {
                   className="shadow-sm valu bg-gray-50 border border-gray-300 text-gray-900 sm:text-lg rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                   defaultValue="Available"
                   style={{
-                    color: "green",
+                   
                     fontWeight: "500",
                     fontSize: "1.3rem",
                     fontStyle: "italic",
