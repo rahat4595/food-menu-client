@@ -8,26 +8,19 @@ const FoodDetails = () => {
     const { _id, foodName, photo, quantity, date, location, status, notes, email, donatorName } = food
     return (
         <div>
-            <div className="hero my-20 animate__animated animate__zoomIn">
+            <div className="hero my-20 ">
                 <div className="hero-content flex-col gap-10 md:gap-28 lg:flex-row">
                     <img src={photo} className=" rounded-lg shadow-2xl" />
                     <div>
                         <h1 className="text-5xl font-bold">{foodName}</h1>
-                        <p className="py-6">{quantity}</p>
+                        <p className="py-6">For {quantity} people</p>
                         <div className="my-4">
                             <b className=' text-xl '>Expire date: {date}</b>
                         </div>
-                        <h1 className='text-xl  font-bold'>Pickup location: {location}</h1>
-
-                        <div className='flex gap-10 mt-4'>
-                            <b className='lg:text-xl'>status: {status}</b>
-                        </div>
-                        <div className='flex gap-10 mt-4'>
-                            <b className='lg:text-xl'>Additional notes: {notes}</b>
-                        </div>
+                      
 
                         {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                        <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button>
+                        <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>Request Food</button>
                         <dialog id="my_modal_3" className="modal">
                             <div className="modal-box">
                                 <form method="dialog">
