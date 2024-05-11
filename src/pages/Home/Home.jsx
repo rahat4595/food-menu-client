@@ -1,5 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Foods from "./Foods";
+import Banner from "./Banner/Banner";
+
 
 const Home = () => {
     const foods = useLoaderData();
@@ -12,6 +14,11 @@ const Home = () => {
 
     return (
         <div>
+            {/* banner section */}
+            <div className="max-w-7xl mx-auto mt-10">
+                <Banner></Banner>
+            </div>
+
             <div className="max-w-7xl mx-auto mt-10">
                 <h2 className="text-4xl font-bold text-center ">Featured Foods</h2>
                 <p className="text-center text-lg mt-10 px-5 lg:px-52">take a look at our featured foods</p>

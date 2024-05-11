@@ -16,9 +16,9 @@ const ReqFoods = () => {
 
     return (
         <div>
-            <h2>My Requested Foods: {reqFood.length}</h2>
+           
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
                 {reqFood.map((food, index) => (
                     <div key={index} className="card bg-base-100 shadow-xl">
                         <figure>
