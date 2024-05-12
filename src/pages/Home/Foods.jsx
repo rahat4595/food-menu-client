@@ -12,7 +12,7 @@ const Foods = ({ food }) => {
         <div>
             <div className="card  w-full bg-base-100 shadow-xl">
                 <figure>
-                    <img src={photo} alt={foodName} />
+                    <img className="duration-300 hover:scale-105" src={photo} alt={foodName} />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">

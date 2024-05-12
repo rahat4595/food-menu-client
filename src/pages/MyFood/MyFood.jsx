@@ -64,7 +64,7 @@ const MyFood = () => {
                             <th className="px-4 py-2">Name</th>
                             <th className="px-4 py-2">Quantity</th>
                             <th className="px-4 py-2">Expire Date</th>
-                            <th className="px-4 py-2">Location</th>
+                            <th className="px-4 py-2">Status</th>
                             <th className="px-4 py-2">Update</th> {/* Add this column for the button */}
                             <th className="px-4 py-2">Delete</th> {/* Add this column for the button */}
                         </tr>
@@ -76,7 +76,7 @@ const MyFood = () => {
                                 <td className="border px-4 py-2">{list.foodName}</td>
                                 <td className="border px-4 py-2">{list.quantity}</td>
                                 <td className="border px-4 py-2">{list.date}</td>
-                                <td className="border px-4 py-2">{list.location}</td>
+                                <td className="border px-4 py-2">{list.status}</td>
                                 <td className="border px-4 py-2">
                                     <Link to={`/updateFood/${list._id}`} className="text-blue-500 hover:underline">Update</Link>
                                 </td>

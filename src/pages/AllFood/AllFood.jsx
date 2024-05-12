@@ -35,7 +35,7 @@ const AllFood = () => {
     };
 
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl  mx-auto">
             <h2>foods: {sortedFoods.length}</h2>
 
             {/* Search input */}
@@ -88,6 +88,8 @@ const AllFood = () => {
                                 <span className="relative z-10">View Details</span>
                             </button>
                             </Link>
+
+                            
                         </div>
                     </div>
                 ))}

@@ -15,13 +15,13 @@ const Home = () => {
     return (
         <div>
             {/* banner section */}
-            <div className="max-w-7xl mx-auto mt-10">
+            <div className="max-w-7xl mx-auto mt-10 p-5 ">
                 <Banner></Banner>
             </div>
 
             <div className="max-w-7xl mx-auto mt-10">
                 <h2 className="text-4xl font-bold text-center ">Featured Foods</h2>
-                <p className="text-center text-lg mt-10 px-5 lg:px-52">take a look at our featured foods</p>
+                <p className="text-center text-lg mt-10 px-5 lg:px-52">Indulge in our handpicked selection of delectable delights, curated to tantalize your taste buds and satisfy your cravings. Discover the finest flavors and culinary masterpieces in our collection of featured foods</p>
             </div>
 
             {/* Render Foods component for each food item */}
@@ -33,7 +33,7 @@ const Home = () => {
 
             </div>
             {/* Show all foods button */}
-            <div className="max-w-7xl mx-auto flex justify-center">
+            <div className="max-w-7xl mx-auto flex my-5 justify-center">
                <Link to='/allFoods'>
                <button className="text-xl font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">
                     <span className="absolute inset-0 bg-[#23BE0A] duration-300 transition-transform group-hover:translate-x-full"></span>
