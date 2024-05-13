@@ -17,16 +17,21 @@ const Foods = ({ food }) => {
                     <img className="duration-300 hover:scale-105" src={photo} alt={foodName} />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">
-                        <p>{donatorName}</p>
-                        <img src={donatorPhoto} alt="" style={{ borderRadius: "50%", width: "50px", height: "50px" }} />
-                    </h2>
-                    <p>Food Name: {foodName}</p>
-                    <p>Quantity: {quantity}</p>
-                    <p>Expire Date: {date}</p>
-                    <p>Pickup Location: {location}</p>
-                    <p>Status: {status}</p>
-                    <p>Additional Notes: {notes}</p>
+                <div className="flex items-center mb-2">
+                        <img src={donatorPhoto} alt="" className="w-10 h-10 rounded-full mr-2" />
+                        <p className="text-gray-800 font-semibold">{donatorName}</p>
+                    </div>
+                    <div className="flex items-center justify-between py-4">
+                        <h2 className="text-xl font-bold text-gray-800">{foodName}</h2>
+                        <span className='px-2 py-1 rounded-full bg-[#23BE0A]  text-white text-sm font-semibold'>{status}</span>
+                    </div>
+                    
+                    <div className="flex justify-between mb-4">
+                        <p className="text-gray-800 font-semibold">Quantity: {quantity}</p>
+                        <span className="text-gray-800 font-semibold">Expire Date: {date}</span>
+                    </div>
+                    <p className="text-gray-800 font-semibold">Pickup Location: {location}</p>
+                    <p className="text-gray-800 font-semibold">Notes: {notes}</p>
                     {/* Add more properties here as needed */}
 
                     <Link to={`/food-details/${_id}`} className="text-xl text-center font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">

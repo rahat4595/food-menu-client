@@ -50,10 +50,11 @@ const AllFood = () => {
         <motion.div initial={{ y: 200, opacity: 0 }}
             whileInView={{ y: 1, opacity: 1 }}
             transition={{ duration: 1.2 }} className="max-w-7xl  mx-auto">
-            <h2>foods: {sortedFoods.length}</h2>
+            
 
-            {/* Search input */}
-            <input
+           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 p-5">
+             {/* Search input */}
+             <input
                 type="text"
                 placeholder="Search by food name..."
                 value={searchQuery}
@@ -73,9 +74,10 @@ const AllFood = () => {
             </select>
 
             {/* Change layout button */}
-            <button onClick={handleChangeLayout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+            <button onClick={handleChangeLayout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-3 py-4 rounded ">
                 Change Layout
             </button>
+           </div>
 
             {/* Display sorted and filtered foods */}
             <div className={`grid ${layout} gap-5 p-5`}>
@@ -85,16 +87,20 @@ const AllFood = () => {
                             <img src={food.photo} alt={food.foodName} />
                         </figure>
                         <div className="card-body">
-                            <h2 className="card-title">
-                                <p>{food.donatorName}</p>
-                                <img src={food.donatorPhoto} alt="" style={{ borderRadius: "50%", width: "50px", height: "50px" }} />
-                            </h2>
-                            <p>Food Name: {food.foodName}</p>
-                            <p>Quantity: {food.quantity}</p>
-                            <p>Expire Date: {food.date}</p>
-                            <p>Pickup Location: {food.location}</p>
-                            <p>Status: {food.status}</p>
-                            <p>Notes: {food.notes}</p>
+                        <div className="flex items-center mb-2">
+                        <img src={food.donatorPhoto} alt="" className="w-10 h-10 rounded-full mr-2" />
+                        <p className="text-gray-800 font-semibold">{food.donatorName}</p>
+                    </div>
+
+                    <div className="flex items-center justify-between py-4">
+                        <h2 className="text-xl font-bold text-gray-800">{food.foodName}</h2>
+                        <span className='px-2 py-1 rounded-full bg-[#23BE0A]  text-white text-sm font-semibold'>{food.status}</span>
+                    </div>
+                            <p className="text-md text-gray-800">Food Name: {food.foodName}</p>
+                            <p className="text-md text-gray-800">Quantity: For {food.quantity} peoples</p>
+                            <p className="text-md text-gray-800">Expire Date: {food.date}</p>
+                            <p className="text-md text-gray-800">Location: {food.location}</p>
+                            <p className="text-md text-gray-800">Notes: {food.notes}</p>
                             {/* Add more properties here as needed */}
 
                             <Link to={`/food-details/${food._id}`}>
