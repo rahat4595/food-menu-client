@@ -2,6 +2,7 @@ import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword,
 import { createContext, useEffect, useState } from "react";
 import { getAuth } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import useAxios from "../Hooks/useAxios";
 
 
 
@@ -9,10 +10,10 @@ export const AuthContext = createContext(null)
 const auth = getAuth(app);
 
 const googleProvider = new GoogleAuthProvider();
-const githubprovider = new GithubAuthProvider
+const githubprovider = new GithubAuthProvider();
 
 const Context = ({children}) => {
-
+    const axiosSecure = useAxios();
     const [user, setUser] = useState(null);
 
     const [loading, setLoading] = useState(true)
@@ -66,15 +67,22 @@ const Context = ({children}) => {
     }
 
     useEffect(() => {
-       const unSubscribe =   onAuthStateChanged(auth, currentUser =>{
-            console.log('user in the auth state changed' , currentUser)
+       const unSubscribe =   onAuthStateChanged(auth, async (currentUser) =>{
+            // console.log('user in the auth state changed' , currentUser)
             setUser(currentUser);
-            setLoading(false)
+            setLoading(false);
+            const loggedUser = currentUser?.email;
+            if(currentUser){
+                await axiosSecure.post('/jwt', loggedUser, {withCredentials: true})
+            }
+            else{
+                await axiosSecure.post('/logout',loggedUser, {withCredentials: true})
+            }
         });
         return () => {
             unSubscribe();
         }
-    } ,[])
+    } ,[axiosSecure])
 
     const authInfo = {
         user,

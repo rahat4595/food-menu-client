@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Foods from "./Foods";
 import Banner from "./Banner/Banner";
+import { motion } from "framer-motion";
 
 
 const Home = () => {
@@ -13,7 +14,10 @@ const Home = () => {
     const topSixFoods = sortedFoods.slice(0, 6);
 
     return (
-        <div>
+        
+        <motion.div initial={{ y: 200, opacity: 0 }}
+             whileInView={{ y: 1, opacity: 1 }}
+             transition={{ duration: 1.2 }}>
             {/* banner section */}
             <div className="max-w-7xl mx-auto mt-10 p-5 ">
                 <Banner></Banner>
@@ -43,7 +47,7 @@ const Home = () => {
 
             </div>
 
-        </div>
+        </motion.div>
     );
 };
 

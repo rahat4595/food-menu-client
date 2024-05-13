@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { toast } from 'react-toastify';
+// import axios from "axios";
 
 
 
@@ -12,7 +13,7 @@ const Login = () => {
 
     const { signIn, signInWithGoogle, githubLogin } = useContext(AuthContext);
 
-    const [loginSuccess, setLoginSuccess] = useState('');
+    
     const [loginError, setLoginError] = useState('');
 
     const location = useLocation();
@@ -27,19 +28,33 @@ const Login = () => {
         const password = form.get('password')
         console.log(email, password);
 
-        setLoginSuccess('')
+        
         setLoginError('')
 
         // login existing user
         signIn(email, password)
             .then(result => {
-                console.log(result.user)
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                // const user = {email}
+                
                 toast.success('Logged in Successfully!')
                 // Reset form field after login
                 e.target.reset();
 
                 // After login go to clicked state otherwish go to home page
+
                 navigate(location?.state ? location.state : '/');
+
+                // get access token
+                // axios.post('https://food-menu-server.vercel.app/jwt', user, {withCredentials: true})
+                // .then(res => {
+                //     console.log(res.data)
+                //     if(res.data.success){
+                //         navigate(location?.state ? location.state : '/');
+                //     }
+                // })
+
             })
             .catch(error => {
                 console.error(error);

@@ -1,16 +1,23 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/Context";
+import useAxios from "../../Hooks/useAxios";
 
 const ReqFoods = () => {
+    const axiosSecure = useAxios();
     const { user } = useContext(AuthContext);
     const [reqFood, setReqFood] = useState([]);
-    const url = `http://localhost:5000/reqFood/${user?.email}`;
+    const url = `https://food-menu-server.vercel.app/reqFood/${user?.email}`;
 
     useEffect(() => {
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => setReqFood(data));
-    }, []);
+
+        fetch(url , {credentials: 'include'})
+        .then((res) => res.json())
+        .then((data) => setReqFood(data));
+        
+        // fetch(url)
+        //     .then((res) => res.json())
+        //     .then((data) => setReqFood(data));
+    }, [url]);
 
    
 

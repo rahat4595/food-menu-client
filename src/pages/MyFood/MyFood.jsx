@@ -2,22 +2,31 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/Context";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import axios from "axios";
+import useAxios from "../../Hooks/useAxios";
 
 
 const MyFood = () => {
-
+    const axiosSecure = useAxios();
     const {user} = useContext(AuthContext);
     console.log(user);
     const [lists, setLists] = useState([]);
 
+    const url = `/myList/${user?.email}`
+
     useEffect(() =>{
-        fetch(`http://localhost:5000/myList/${user?.email}`)
-        .then(res => res.json())
-            .then(data => {
-                setLists(data);
+        axiosSecure.get(url, {withCredentials: true} )
+        .then(res => {
+            setLists(res.data)
+        })
+
+        // fetch(url)
+        // .then(res => res.json())
+        //     .then(data => {
+        //         setLists(data);
                 
-            });
-    } ,[user]);
+        //     });
+    } ,[url, axiosSecure]);
 
     const handleDeleteCraft = (id) => {
         // Show SweetAlert confirmation dialog
@@ -32,7 +41,7 @@ const MyFood = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 // If user confirms deletion, send DELETE request to server
-                fetch(`http://localhost:5000/foods/${id}`, {
+                fetch(`https://food-menu-server.vercel.app/foods/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

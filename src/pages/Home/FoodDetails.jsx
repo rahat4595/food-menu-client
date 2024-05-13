@@ -97,7 +97,7 @@ const FoodDetails = () => {
     }
 
 
-    // fetch(`http://localhost:5000/reqFood/${_id}`, {
+    // fetch(`https://food-menu-server.vercel.app/reqFood/${_id}`, {
     //     method: "PUT",
     //     headers: {
     //         "content-type": "application/json",

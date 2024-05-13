@@ -46,7 +46,7 @@ const Update = () => {
         
 
         // send data to the server
-        fetch(`http://localhost:5000/foods/${_id}`,{
+        fetch(`https://food-menu-server.vercel.app/foods/${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
@@ -266,7 +266,7 @@ const Update = () => {
             </div>
             <div className="flex justify-center">
               <input
-                className="hover:shadow-form w-10/12 mt-6 rounded-md bg-[#FF3811] py-3 px-8 text-center text-xl font-semibold text-white outline-none"
+                className="cursor-pointer w-full mt-6 rounded-md bg-[#23BE0A] py-3 px-8 text-center text-xl font-semibold text-white outline-none"
                 type="submit"
                 value="Update Food"
               />

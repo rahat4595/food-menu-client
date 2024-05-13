@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/Context";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 
 const Foods = ({ food }) => {
 
@@ -9,7 +9,9 @@ const Foods = ({ food }) => {
 
     const { _id, foodName, photo, quantity, date, location, status, notes, donatorName, donatorPhoto } = food
     return (
-        <div>
+        <motion.div initial={{ y: 200, opacity: 0 }}
+        whileInView={{ y: 1, opacity: 1 }}
+        transition={{ duration: 1.2 }}>
             <div className="card  w-full bg-base-100 shadow-xl">
                 <figure>
                     <img className="duration-300 hover:scale-105" src={photo} alt={foodName} />
@@ -37,7 +39,7 @@ const Foods = ({ food }) => {
 
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

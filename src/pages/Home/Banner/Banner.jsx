@@ -4,8 +4,8 @@ import '../../../../node_modules/swiper/swiper-bundle.min.css';
 
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-import slider1 from '../../../assets/slider-2.jpg';
-import slider2 from '../../../assets/slider-3.jpg';
+import slider1 from '../../../assets/slider-4.jpg';
+import slider2 from '../../../assets/slider-5.jpg';
 import slider3 from '../../../assets/slider-1.jpg';
 import { Typewriter } from 'react-simple-typewriter';
 
