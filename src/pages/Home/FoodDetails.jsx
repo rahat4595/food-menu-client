@@ -22,7 +22,7 @@ const FoodDetails = () => {
   const queryClient = useQueryClient();
   const { data, isLoading } = useQuery({
     queryKey: ["foodDetails", id],
-    queryFn: async () => await axiosSecure.get(`/foods/${id}`),
+    queryFn: async () => await axiosSecure.get(`/foods/${id}`, {withCredentials: true}),
   });
 
   const { mutateAsync: addRequest } = useMutation({

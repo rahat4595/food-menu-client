@@ -46,7 +46,7 @@ const Update = () => {
         
 
         // send data to the server
-        fetch(`https://food-menu-server.vercel.app/foods/${_id}`,{
+        fetch(`https://food-menu-server.vercel.app/foods/${_id}`,{ credentials: 'include' } ,{
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
