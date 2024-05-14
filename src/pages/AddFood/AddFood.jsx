@@ -61,7 +61,7 @@ const AddFood = () => {
                     confirmButtonText: 'OK'
                   });
 
-                  
+                  form.reset();
             }
         })
     }

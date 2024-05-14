@@ -132,13 +132,15 @@ const FoodDetails = () => {
         <div className="hero-content flex-col gap-10 md:gap-28 lg:flex-row">
           <img src={photo} className=" rounded-lg shadow-2xl" />
           <div>
-            <h1 className="text-5xl font-bold">{foodName}</h1>
-            <p className="py-6">For {quantity} people</p>
-            <p className="py-6 text-green-500">Status {status}</p>
-            <div className="my-4">
-              <b className=' text-xl '>Expire date: {date}</b>
-              <img src={donatorPhoto} alt="" />
-            </div>
+            <h1 className="text-3xl md:text-5xl font-bold">{foodName}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold pt-10">Donator: {donatorName}</h1>
+            <p className=" text-2xl pt-5">Quantity: For {quantity} people</p>
+            <p className=" text-2xl pt-5">Pickup location: {location}</p>
+            <p className=" text-2xl pt-5">Expire Date: {date}</p>
+            <p className=" text-2xl pt-5">Status: <span className="px-2 py-1 rounded-full bg-[#23BE0A]  text-white text-sm font-semibold">{status}</span></p>
+            {/* <p className='px-2 py-1 rounded-full bg-[#23BE0A]  text-white text-sm font-semibold'>{status}</p> */}
+
+            
 
             <button onClick={() => setOpenModal(true)}
               className="text-xl font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">
