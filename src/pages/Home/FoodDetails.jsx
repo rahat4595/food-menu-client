@@ -7,6 +7,7 @@ import { Modal } from "flowbite-react";
 import useAxios from "../../Hooks/useAxios";
 import Loader from "../../Loader/Loader";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import 'animate.css';
 
 const FoodDetails = () => {
   
@@ -127,7 +128,7 @@ const FoodDetails = () => {
 
 
   return (
-    <div>
+    <div className="animate__animated animate__zoomIn">
       <div className="hero my-20 ">
         <div className="hero-content flex-col gap-10 md:gap-28 lg:flex-row">
           <img src={photo} className=" rounded-lg shadow-2xl" />

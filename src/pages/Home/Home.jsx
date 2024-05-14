@@ -4,6 +4,7 @@ import Banner from "./Banner/Banner";
 import { motion } from "framer-motion";
 import Works from "./Works";
 import SupportUs from "./SupportUs";
+import { Bounce,  Slide } from "react-awesome-reveal";
 
 
 const Home = () => {
@@ -51,14 +52,16 @@ const Home = () => {
 
             {/* Our Works */}
             <div className="max-w-7xl mx-auto mt-10">
-                <h2 className="text-4xl font-bold text-center ">Our Works</h2>
+               <Bounce triggerOnce> <h2 className="text-4xl font-bold text-center ">Our Works</h2>
                 <p className="text-center text-lg mt-10 px-5 lg:px-52">Discover Our Culinary Contributions
-                    Explore the Heartfelt Efforts Behind Our Food Donations and help us more by donating.</p>
+                    Explore the Heartfelt Efforts Behind Our Food Donations and help us more by donating.</p></Bounce>
             </div>
 
-            <div className="max-w-7xl mx-auto">
+           <Slide triggerOnce>
+           <div className="max-w-7xl mx-auto">
                 <Works></Works>
             </div>
+           </Slide>
 
             {/* support us */}
 

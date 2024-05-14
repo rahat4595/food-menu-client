@@ -33,8 +33,8 @@ const Banner = () => {
           <div className='text-center bg-gray-700 h-full w-full bg-opacity-30 flex justify-center items-center'>
             <div className='mt-12 space-y-4'>
 
-              <h1 className='text-xl md:text-6xl font-bold text-white'>YOUR ULTIMATE SPOT <br /> FOR CREATIVE{' '}<Typewriter
-                words={['CREATION', 'INSPIRATION', 'EXPRESSION']}
+              <h1 className='text-xl md:text-6xl font-bold text-white'>YOUR ULTIMATE SPOT <br /> FOR CREATING{' '}<Typewriter
+                words={['HOPE', 'HAPPINESS', 'AWARNESS']}
                 loop={true}
                 cursor
                 cursorStyle='_'
@@ -44,7 +44,7 @@ const Banner = () => {
               /></h1>
 
               <div>
-                <p className=' lg:text-xl font-semibold  text-white'>Discover the beauty of handmade craftsmanship with our curated selection of unique and inspiring creations.</p>
+                <p className=' lg:text-xl font-semibold  text-white'>Harvesting Kindness Welcome to Our Food Donation Platform</p>
               </div>
 
               <button className="text-xl font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">
@@ -66,8 +66,8 @@ const Banner = () => {
           <div className='text-center bg-gray-700 h-full w-full bg-opacity-30 flex justify-center items-center'>
             <div className='mt-12 space-y-4'>
 
-              <h1 className='text-xl md:text-6xl font-bold text-white'>YOUR ULTIMATE SPOT <br /> FOR CREATIVE{' '}<Typewriter
-                words={['CREATION', 'INSPIRATION', 'EXPRESSION']}
+              <h1 className='text-xl md:text-6xl font-bold text-white'>YOUR ULTIMATE SPOT <br /> FOR CREATING{' '}<Typewriter
+                words={['HOPE', 'HAPPINESS', 'AWARNESS']}
                 loop={true}
                 cursor
                 cursorStyle='_'
@@ -77,7 +77,7 @@ const Banner = () => {
               /></h1>
 
               <div>
-                <p className='lg:text-xl font-semibold  text-white'>Explore the allure of artisanal craftsmanship with our thoughtfully curated assortment of one-of-a-kind and inspiring creations</p>
+                <p className='lg:text-xl font-semibold  text-white'>Sustaining Smiles Your Destination for Food Donations</p>
               </div>
 
               <button className="text-xl font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">
@@ -100,8 +100,8 @@ const Banner = () => {
           <div className='text-center bg-gray-700 h-full w-full bg-opacity-30 flex justify-center items-center'>
             <div className='mt-12 space-y-4'>
 
-              <h1 className='text-xl md:text-6xl font-bold text-white'>YOUR ULTIMATE SPOT <br /> FOR CREATIVE{' '}<Typewriter
-                words={['CREATION', 'INSPIRATION', 'EXPRESSION']}
+              <h1 className='text-xl md:text-6xl font-bold text-white'>YOUR ULTIMATE SPOT <br /> FOR CREATING{' '}<Typewriter
+                words={['HOPE', 'HAPPINESS', 'AWARNESS']}
                 loop={true}
                 cursor
                 cursorStyle='_'
@@ -112,7 +112,7 @@ const Banner = () => {
 
               <div>
                 <p className='lg:text-xl font-semibold  text-white'>
-                  Explore the allure of artisanal craftsmanship with our handpicked array of distinctive and captivating arts.</p>
+                Unity in Giving Discover Our Food Donation Network</p>
               </div>
 
               <button className="text-xl font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">
