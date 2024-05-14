@@ -12,19 +12,19 @@ const Footer = () => {
                     </div>
                     <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                         <div className="space-y-3">
-                            <h3 className="tracking-wide uppercase text-gray-50">Product</h3>
+                            <h3 className="tracking-wide uppercase text-gray-50">Donate Food</h3>
                             <ul className="space-y-1">
                                 <li>
-                                    <a rel="noopener noreferrer" href="#">Features</a>
+                                    <a rel="noopener noreferrer" href="#">Ways to Give</a>
                                 </li>
                                 <li>
-                                    <a rel="noopener noreferrer" href="#">Integrations</a>
+                                    <a rel="noopener noreferrer" href="#">Partnerships</a>
                                 </li>
                                 <li>
-                                    <a rel="noopener noreferrer" href="#">Pricing</a>
+                                    <a rel="noopener noreferrer" href="#">Donate Now</a>
                                 </li>
                                 <li>
-                                    <a rel="noopener noreferrer" href="#">FAQ</a>
+                                    <a rel="noopener noreferrer" href="#">Resources</a>
                                 </li>
                             </ul>
                         </div>
@@ -32,21 +32,21 @@ const Footer = () => {
                             <h3 className="tracking-wide uppercase text-gray-50">Company</h3>
                             <ul className="space-y-1">
                                 <li>
-                                    <a rel="noopener noreferrer" href="#">Privacy</a>
+                                    <a rel="noopener noreferrer" href="#">Share Serve</a>
                                 </li>
                                 <li>
-                                    <a rel="noopener noreferrer" href="#">Terms of Service</a>
+                                    <a rel="noopener noreferrer" href="#">Feed unity</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="space-y-3">
-                            <h3 className="uppercase text-gray-50">Developers</h3>
+                            <h3 className="uppercase text-gray-50">Donators</h3>
                             <ul className="space-y-1">
                                 <li>
-                                    <a rel="noopener noreferrer" href="#">Public API</a>
+                                    <a rel="noopener noreferrer" href="#">Public</a>
                                 </li>
                                 <li>
-                                    <a rel="noopener noreferrer" href="#">Documentation</a>
+                                    <a rel="noopener noreferrer" href="#">NGO</a>
                                 </li>
                                 <li>
                                     <a rel="noopener noreferrer" href="#">Guides</a>
@@ -75,7 +75,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="py-6 text-sm text-center text-gray-400">© 1968 Company Co. All rights reserved.</div>
+                <div className="py-6 text-sm text-center text-gray-400">© 2024 FoodShare Co. All rights reserved.</div>
             </footer>
         </div>
     );
