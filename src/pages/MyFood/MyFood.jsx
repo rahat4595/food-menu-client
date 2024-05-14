@@ -4,29 +4,30 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
 import useAxios from "../../Hooks/useAxios";
+import { Helmet } from "react-helmet-async";
 
 
 const MyFood = () => {
     const axiosSecure = useAxios();
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     console.log(user);
     const [lists, setLists] = useState([]);
 
     const url = `/myList/${user?.email}`
 
-    useEffect(() =>{
-        axiosSecure.get(url, {withCredentials: true} )
-        .then(res => {
-            setLists(res.data)
-        })
+    useEffect(() => {
+        axiosSecure.get(url, { withCredentials: true })
+            .then(res => {
+                setLists(res.data)
+            })
 
         // fetch(url)
         // .then(res => res.json())
         //     .then(data => {
         //         setLists(data);
-                
+
         //     });
-    } ,[url, axiosSecure]);
+    }, [url, axiosSecure]);
 
     const handleDeleteCraft = (id) => {
         // Show SweetAlert confirmation dialog
@@ -66,6 +67,9 @@ const MyFood = () => {
 
 
             <div className="overflow-x-auto max-w-7xl mx-auto mt-5">
+                <Helmet>
+                    <title>Food Share | My Foods</title>
+                </Helmet>
                 <table className="table-auto w-full">
                     <thead>
                         <tr className="text-xl">
@@ -90,7 +94,7 @@ const MyFood = () => {
                                     <Link to={`/updateFood/${list._id}`} className="text-blue-500 hover:underline">Update</Link>
                                 </td>
                                 <td className="border px-4 py-2">
-                                    <button onClick={() => handleDeleteCraft(list._id)}  className="text-blue-500 hover:underline">Delete</button>
+                                    <button onClick={() => handleDeleteCraft(list._id)} className="text-blue-500 hover:underline">Delete</button>
                                 </td>
                             </tr>
                         ))}

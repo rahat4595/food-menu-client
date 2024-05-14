@@ -1,21 +1,22 @@
 import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../providers/Context';
+import { Helmet } from 'react-helmet-async';
 
 const AddFood = () => {
-    const {user} = useContext(AuthContext);
-    console.log("user", user)
+  const { user } = useContext(AuthContext);
+  console.log("user", user)
 
-    if (!user) {
-        return <div>Loading...</div>;
-    }
+  if (!user) {
+    return <div>Loading...</div>;
+  }
 
-    const { email, displayName, photoURL } = user;
+  const { email, displayName, photoURL } = user;
 
-    const handleAddFood = event => {
-        event.preventDefault();
+  const handleAddFood = event => {
+    event.preventDefault();
 
-        const form = event.target;
+    const form = event.target;
 
     const foodName = form.foodName.value;
     const quantity = form.quantity.value;
@@ -24,7 +25,7 @@ const AddFood = () => {
     const photo = form.photo.value;
     const status = form.status.value;
     const notes = form.notes.value;
-    
+
 
     const newFood = {
       foodName,
@@ -38,45 +39,48 @@ const AddFood = () => {
       donatorName: displayName,
       donatorPhoto: photoURL,
     };
-        console.log("New Craft", newFood)
-
-        
-
-        // send data to the server
-        fetch('https://food-menu-server.vercel.app/foods',{
-            method: 'POST',
-            headers: {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(newFood)
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.insertedId){
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Craft Added Successfully',
-                    icon: 'success',
-                    confirmButtonText: 'OK'
-                  });
-
-                  form.reset();
-            }
-        })
-    }
+    console.log("New Craft", newFood)
 
 
 
-    return (
-        <div className="bg-white border-2 rounded-lg shadow relative m-10">
-          
+    // send data to the server
+    fetch('https://food-menu-server.vercel.app/foods', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newFood)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: 'Success!',
+            text: 'Craft Added Successfully',
+            icon: 'success',
+            confirmButtonText: 'OK'
+          });
+
+          form.reset();
+        }
+      })
+  }
+
+
+
+  return (
+    <div className="bg-white border-2 rounded-lg shadow relative m-10">
+      <Helmet>
+        <title>Food Share | Add Food</title>
+      </Helmet>
+
       <div className="flex items-start justify-between p-5 border-b rounded-t">
         <h3 className="md:text-2xl text-xl italic font-bold">
           Donor Information :-
         </h3>
 
-        
+
       </div>
       <div className="p-6 space-y-6">
         <form onSubmit={handleAddFood}>
@@ -88,26 +92,26 @@ const AddFood = () => {
             />
           </div>
 
-              {/* donator photo url */}
-              <div className="col-span-12 sm:col-span-3">
-              <label
-                htmlFor="donatorPhoto"
-                className="text-lg italic font-semibold text-gray-900 block mb-2"
-              >
-               Donator Photo
-              </label>
-              <input
-                type="text"
-                name="donatorPhoto"
-                id="donatorPhoto"
-                className="shadow-sm bg-gray-50 border border-gray-300 text-black sm:text-lg  rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
-                placeholder="Your Email"
-                defaultValue={user?.photoURL}
-                required
-                readOnly
-              />
-            </div>
-            {/* sdfsadf */}
+          {/* donator photo url */}
+          <div className="col-span-12 sm:col-span-3">
+            <label
+              htmlFor="donatorPhoto"
+              className="text-lg italic font-semibold text-gray-900 block mb-2"
+            >
+              Donator Photo
+            </label>
+            <input
+              type="text"
+              name="donatorPhoto"
+              id="donatorPhoto"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-black sm:text-lg  rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+              placeholder="Your Email"
+              defaultValue={user?.photoURL}
+              required
+              readOnly
+            />
+          </div>
+          {/* sdfsadf */}
 
 
           <div className="grid grid-cols-6 gap-6">
@@ -148,7 +152,7 @@ const AddFood = () => {
               />
             </div>
 
-        
+
 
             <div className="col-span-6 sm:col-span-3">
               <p className="relative md:mt-8 mt-4 w-full inline-flex items-center justify-center p-0.5 mb-6 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group ">
@@ -170,7 +174,7 @@ const AddFood = () => {
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-base font-semibold rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
               />
             </div>
-            
+
             <div className="col-span-6 sm:col-span-3 md:mt-[110px]">
               <label
                 htmlFor="quantity"
@@ -204,7 +208,7 @@ const AddFood = () => {
                 htmlFor="location"
                 className="text-lg italic font-semibold text-gray-900 block mb-2"
               >
-               Pickup Location
+                Pickup Location
               </label>
               <input
                 type="text"
@@ -241,7 +245,7 @@ const AddFood = () => {
                 className="shadow-sm valu bg-gray-50 border border-gray-300 text-gray-900 sm:text-lg rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                 defaultValue="Available"
                 style={{
-                  
+
                   fontWeight: "500",
                   fontSize: "1.3rem",
                   fontStyle: "italic",
@@ -275,7 +279,7 @@ const AddFood = () => {
         </form>
       </div>
     </div>
-    );
+  );
 };
 
 export default AddFood;

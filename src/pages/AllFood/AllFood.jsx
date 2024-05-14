@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/Context";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const AllFood = () => {
     const foods = useLoaderData();
@@ -51,6 +52,9 @@ const AllFood = () => {
             whileInView={{ y: 1, opacity: 1 }}
             transition={{ duration: 1.2 }} className="max-w-7xl  mx-auto">
             
+            <Helmet>
+                <title>Food Share | Available Foods</title>
+            </Helmet>
 
            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 p-5">
              {/* Search input */}

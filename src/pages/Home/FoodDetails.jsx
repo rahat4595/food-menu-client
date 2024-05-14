@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { AuthContext } from "../../providers/Context";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
@@ -8,11 +8,12 @@ import useAxios from "../../Hooks/useAxios";
 import Loader from "../../Loader/Loader";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import 'animate.css';
+import { Helmet } from "react-helmet-async";
 
 const FoodDetails = () => {
-  
+
   const { user } = useContext(AuthContext)
-  
+
   const [openModal, setOpenModal] = useState(false);
 
 
@@ -39,8 +40,8 @@ const FoodDetails = () => {
     );
   }
 
-  
- 
+
+
   const reqDate = new Date().toISOString().slice(0, 10);
   const { _id, foodName, photo, quantity, date, location, status, notes, email, donatorName, donatorPhoto } = data.data;
   console.log(data.data)
@@ -129,6 +130,9 @@ const FoodDetails = () => {
 
   return (
     <div className="animate__animated animate__zoomIn">
+      <Helmet>
+        <title>Food Share | Details</title>
+      </Helmet>
       <div className="hero my-20 ">
         <div className="hero-content flex-col gap-10 md:gap-28 lg:flex-row">
           <img src={photo} className=" rounded-lg shadow-2xl" />
@@ -141,7 +145,7 @@ const FoodDetails = () => {
             <p className=" text-2xl pt-5">Status: <span className="px-2 py-1 rounded-full bg-[#23BE0A]  text-white text-sm font-semibold">{status}</span></p>
             {/* <p className='px-2 py-1 rounded-full bg-[#23BE0A]  text-white text-sm font-semibold'>{status}</p> */}
 
-            
+
 
             <button onClick={() => setOpenModal(true)}
               className="text-xl font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">

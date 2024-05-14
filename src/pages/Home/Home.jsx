@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Works from "./Works";
 import SupportUs from "./SupportUs";
 import { Bounce,  Slide } from "react-awesome-reveal";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -23,7 +24,9 @@ const Home = () => {
             whileInView={{ y: 1, opacity: 1 }}
             transition={{ duration: 1.2 }}>
                 <div>
-
+                <Helmet>
+                <title>Food Share | Home</title>
+            </Helmet>
                
             {/* banner section */}
             <div className="max-w-7xl mx-auto mt-10 p-5 ">
