@@ -7,7 +7,7 @@ const Footer = () => {
                     <div className="lg:w-1/3 ">
                         <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
                             
-                            <span className="self-center text-2xl font-semibold">Gourmet Globe</span>
+                            <span className="self-center text-2xl font-semibold">Feed Unity</span>
                         </a>
                     </div>
                     <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
