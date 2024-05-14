@@ -84,7 +84,7 @@ const AllFood = () => {
            </div>
 
             {/* Display sorted and filtered foods */}
-            <div className={`grid ${layout} gap-5 p-5`}>
+            <div className={`grid ${layout === 'grid-cols-3' ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-5 p-5 sm:grid-cols-1 md:grid-cols-2`}>
                 {sortedFoods.map((food, index) => (
                     <div key={index} className="card bg-base-100 shadow-xl">
                         <figure>
