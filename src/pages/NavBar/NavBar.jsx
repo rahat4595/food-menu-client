@@ -65,7 +65,7 @@ const NavBar = () => {
                             </label>
                         </ul>
                     </div>
-                    <h1 className="text-md lg:text-2xl font-bold">Feed Unity</h1>
+                   <div> <img className="w-[100px] h-[100px] object-contain" src="https://i.ibb.co/g4pMMHq/food-share1.png" alt="" /></div>
                 </div>
                 <div className="navbar-center hidden lg:flex ">
                     <ul className="menu flex gap-5 menu-horizontal px-5">
