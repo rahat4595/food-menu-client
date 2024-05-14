@@ -7,6 +7,7 @@ import SupportUs from "./SupportUs";
 import { Bounce,  Slide } from "react-awesome-reveal";
 
 
+
 const Home = () => {
     const foods = useLoaderData();
 
@@ -21,6 +22,9 @@ const Home = () => {
         <motion.div initial={{ y: 200, opacity: 0 }}
             whileInView={{ y: 1, opacity: 1 }}
             transition={{ duration: 1.2 }}>
+                <div>
+
+               
             {/* banner section */}
             <div className="max-w-7xl mx-auto mt-10 p-5 ">
                 <Banner></Banner>
@@ -77,8 +81,9 @@ const Home = () => {
             </div>
 
 
-
+            </div>
         </motion.div>
+        
     );
 };
 

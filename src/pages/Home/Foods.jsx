@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/Context";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { GrNotes } from "react-icons/gr";
 
 const Foods = ({ food }) => {
 
@@ -30,8 +32,8 @@ const Foods = ({ food }) => {
                         <p className="text-gray-800 font-semibold">Quantity: {quantity}</p>
                         <span className="text-gray-800 font-semibold">Expire Date: {date}</span>
                     </div>
-                    <p className="text-gray-800 font-semibold">Pickup Location: {location}</p>
-                    <p className="text-gray-800 font-semibold">Notes: {notes}</p>
+                    <p className="text-gray-800 font-semibold flex gap-3"><MdOutlineLocationOn className="mt-1" /> {location}</p>
+                    <p className="text-gray-800 font-semibold flex gap-3"><GrNotes className="mt-1" /> {notes}</p>
                     {/* Add more properties here as needed */}
 
                     <Link to={`/food-details/${_id}`} className="text-xl text-center font-semibold px-5 py-2 bg-black text-white rounded-md mt-10 relative overflow-hidden group">
