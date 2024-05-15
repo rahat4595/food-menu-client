@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { IoEye, IoEyeOff } from "react-icons/io5";
 import { toast } from 'react-toastify';
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -107,7 +108,9 @@ const Register = () => {
 
     return (
         <div className="max-w-7xl mx-auto">
-            
+            <Helmet>
+                <title>Food Share | Register</title>
+            </Helmet>
             <div className="md:pt-10 pt-8 pb-8 md:pb-10">
                 <img className="mx-auto md:w-[400px] w-[500px] rounded-3xl" alt="" />
             </div>

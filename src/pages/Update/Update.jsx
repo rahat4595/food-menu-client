@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../providers/Context';
 import { useLoaderData } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Update = () => {
     const food = useLoaderData();
@@ -70,6 +71,9 @@ const Update = () => {
     }
     return (
         <div className="bg-white border-2 rounded-lg shadow relative m-10">
+          <Helmet>
+                <title>Food Share | Update</title>
+            </Helmet>
         <div className="flex items-start justify-between p-5 border-b rounded-t">
           <h3 className="md:text-2xl text-xl italic font-bold">
             Donor Information :-
