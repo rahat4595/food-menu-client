@@ -20,3 +20,13 @@ Food Share: a platform dedicated to fostering community engagement through food 
 
 - **Login and Register:** Securely access your account or create a new one to unlock the amazing expirence of helping people.
 
+## Category
+
+## B9 A11 Assignment_category_0007
+
+
+## NPM Packages for challenge task
+
+- **Lottie-react**
+
+- **Framer-motion**
