@@ -35,7 +35,7 @@ const Home = () => {
 
             <div className="max-w-7xl mx-auto mt-10">
                 <h2 className="text-4xl font-bold text-center ">Featured Foods</h2>
-                <p className="text-center text-lg mt-10 px-5 lg:px-52">Discover Our Featured Foods: A Bounty of Generous Offerings, Each Dish a Symbol of Hope and Community Support.</p>
+                <p className="text-center text-lg mt-10 px-5 lg:px-52">Discover Our Featured Foods A Bounty of Generous Offerings, Each Dish a Symbol of Hope and Community Support.</p>
             </div>
 
             {/* Render Foods component for each food item */}
