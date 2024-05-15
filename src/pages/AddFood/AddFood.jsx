@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../providers/Context';
 import { Helmet } from 'react-helmet-async';
+import Lottie from "lottie-react";
+import info from "../../assets/info.json"
 
 const AddFood = () => {
   const { user } = useContext(AuthContext);
@@ -85,11 +87,13 @@ const AddFood = () => {
       <div className="p-6 space-y-6">
         <form onSubmit={handleAddFood}>
           <div className="flex justify-center mb-6">
-            <img
+
+            <Lottie animationData={info}></Lottie>
+            {/* <img
               className="rounded-full p-1 border-2 border-blue-600"
               src={user?.photoURL}
               alt=""
-            />
+            /> */}
           </div>
 
           {/* donator photo url */}
