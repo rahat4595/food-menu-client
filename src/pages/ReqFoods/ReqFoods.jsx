@@ -23,14 +23,19 @@ const ReqFoods = () => {
 
 
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
             <Helmet>
                 <title>Food Share | Request Food</title>
             </Helmet>
 
+            <div className="text-2xl font-semibold py-4">My Requested Food: {reqFood.length}</div>
+
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
                 {reqFood.map((food, index) => (
-                    <div key={index} className="card bg-base-100 shadow-xl">
+
+                    <div  key={index}>
+                       
+                    <div className="card bg-base-100 shadow-xl">
                         <figure>
                             <img src={food.photo} alt={food.foodName} />
                         </figure>
@@ -49,6 +54,7 @@ const ReqFoods = () => {
 
                             {/* Add more properties here as needed */}
 
+                        </div>
                         </div>
                     </div>
                 ))}

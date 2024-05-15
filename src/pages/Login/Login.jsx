@@ -127,7 +127,7 @@ const Login = () => {
 
                     <div className="md:mt-5 mt-6 flex gap-2 items-center justify-between font-semibold">
                         <p className="flex text-slate-900">
-                            <input className="mr-2" type="checkbox" />
+                            <input className="mr-2 mt-2" type="checkbox" />
                             <span className="text-base md:text-sm lg:text-lg">Remember Me</span>
                         </p>
                         <a className="text-blue-600 lg:text-lg text-base hover:text-blue-700 hover:underline hover:underline-offset-4" href="#">Forgot Password?</a>
