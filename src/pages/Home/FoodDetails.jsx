@@ -51,7 +51,7 @@ const FoodDetails = () => {
 
   const handleReqFood = async (event) => {
     event.preventDefault();
-    if (user?.email === email) return toast.error('you can not request food because your email and donator email is same ')
+    if (user?.email === email) return toast.error('You can not request for the food that you have added')
 
     const form = event.target;
 

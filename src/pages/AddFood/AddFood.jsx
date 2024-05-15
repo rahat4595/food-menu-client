@@ -41,7 +41,7 @@ const AddFood = () => {
       donatorName: displayName,
       donatorPhoto: photoURL,
     };
-    console.log("New Craft", newFood)
+    console.log("New Food", newFood)
 
 
 
@@ -59,7 +59,7 @@ const AddFood = () => {
         if (data.insertedId) {
           Swal.fire({
             title: 'Success!',
-            text: 'Craft Added Successfully',
+            text: 'Food Added Successfully',
             icon: 'success',
             confirmButtonText: 'OK'
           });

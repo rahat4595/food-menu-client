@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         {
           path: '/updateFood/:id',
           element: <PrivateRoute><Update></Update></PrivateRoute>,
-          loader: ({params}) => fetch(`https://food-menu-server.vercel.app/foods/${params.id}`)
+          // loader: ({params}) => fetch(`https://food-menu-server.vercel.app/foods/${params.id}`)
         },
         {
           path:'/myReq',

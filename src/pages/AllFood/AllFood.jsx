@@ -78,7 +78,7 @@ const AllFood = () => {
             </select>
 
             {/* Change layout button */}
-            <button onClick={handleChangeLayout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-3 py-4 rounded ">
+            <button onClick={handleChangeLayout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-3 py-4 rounded hidden lg:block">
                 Change Layout
             </button>
            </div>
