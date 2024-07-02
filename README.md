@@ -21,6 +21,10 @@ Food Share: a platform dedicated to fostering community engagement through food 
 - **Login and Register:** Securely access your account or create a new one to unlock the amazing expirence of helping people.
 
 
+## Technologies
+
+- **html** - **css** - **JavaScript** - **react** - **tailwind** - **firebase** - **node** - **express** - **mongoDB**
+
 
 ## NPM Packages 
 
