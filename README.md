@@ -48,3 +48,17 @@ Make sure you have the following installed on your machine:
 
 1. **Clone the repository:**
 git clone https://github.com/your-username/your-repository.git
+2. **Navigate to the project directory:**
+cd your-repository
+
+## Backend Setup
+**Navigate to the backend directory:**
+cd backend
+**Install backend dependencies:**
+npm install
+**Create a .env file in the backend directory and add your environment variables:**
+PORT=5000
+MONGO_URI=your-mongodb-uri
+**Start the backend server:**
+npm start
+
