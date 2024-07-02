@@ -31,3 +31,20 @@ Food Share: a platform dedicated to fostering community engagement through food 
 - **Lottie-react**
 
 - **Framer-motion**
+
+## Getting Started
+
+Follow these steps to get a local copy of the project and run it on your machine.
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/en/download/)
+- [npm](https://www.npmjs.com/get-npm)
+- [MongoDB](https://www.mongodb.com/try/download/community)
+
+### Installation
+
+1. **Clone the repository:**
+git clone https://github.com/your-username/your-repository.git
