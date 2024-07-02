@@ -52,13 +52,13 @@ git clone https://github.com/your-username/your-repository.git
 cd your-repository
 
 ## Backend Setup
-**Navigate to the backend directory:**
+1. **Navigate to the backend directory:**
 cd backend
-**Install backend dependencies:**
+2. **Install backend dependencies:**
 npm install
-**Create a .env file in the backend directory and add your environment variables:**
+3. **Create a .env file in the backend directory and add your environment variables:**
 PORT=5000
 MONGO_URI=your-mongodb-uri
-**Start the backend server:**
+4. **Start the backend server:**
 npm start
 
