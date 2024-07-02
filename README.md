@@ -23,7 +23,7 @@ Food Share: a platform dedicated to fostering community engagement through food 
 
 ## Technologies
 
-- **html** - **css** - **JavaScript** - **react** - **tailwind** - **firebase** - **node** - **express** - **mongoDB**
+- **html** - **css** - **JavaScript** - **react** - **tailwind** - **firebase** - **JWT** - **node** - **express** - **mongoDB**
 
 
 ## NPM Packages 
